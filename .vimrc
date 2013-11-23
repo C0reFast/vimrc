@@ -65,6 +65,8 @@ Bundle 'scrooloose/nerdtree'
 
 Bundle 'Yggdroot/indentLine'
 
+Bundle 'Raimondi/delimitMate'
+
 Bundle 'hdima/python-syntax'
 let python_highlight_all = 1
 
