@@ -63,7 +63,7 @@ Bundle 'honza/vim-snippets'
 
 Bundle 'scrooloose/nerdtree'
 
-Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Yggdroot/indentLine'
 
 Bundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
