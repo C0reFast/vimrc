@@ -65,6 +65,9 @@ Bundle 'scrooloose/nerdtree'
 
 Bundle 'Yggdroot/indentLine'
 
+Bundle 'hdima/python-syntax'
+let python_highlight_all = 1
+
 Bundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 
