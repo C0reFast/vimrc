@@ -29,11 +29,6 @@ set backspace=indent,eol,start "设置退格
 set fileencodings=utf-8,gb2312,gbk,gb18030 "设置文件编码，解决中文问题
 
 
-"设置第80行高亮
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn="80,".join(range(120,200),",")
-
-
 let mapleader = ","
 
 "快速编辑 .vimrc
@@ -80,3 +75,7 @@ filetype plugin indent on "开启文件插件
 "配色方案
 colorscheme molokai
 set t_Co=256
+
+"设置第80行高亮
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="80,".join(range(120,200),",")
