@@ -70,6 +70,8 @@ Bundle 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-line-length=100"
 
+Bundle 'terryma/vim-expand-region'
+
 filetype plugin indent on "开启文件插件
 
 "配色方案
