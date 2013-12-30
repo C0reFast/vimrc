@@ -1,4 +1,4 @@
-set lines=31 columns=120 "设置窗口大小
+set lines=31 columns=110 "设置窗口大小
 
 set nocompatible "设置不兼容模式
 set number "显示行数
@@ -46,12 +46,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tomasr/molokai'
 
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-
-Bundle 'honza/vim-snippets'
-
 Bundle 'scrooloose/nerdtree'
 
 Bundle 'Yggdroot/indentLine'
@@ -71,6 +65,13 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-line-length=100"
 
 Bundle 'terryma/vim-expand-region'
+
+Bundle 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on "开启文件插件
 
