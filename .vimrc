@@ -72,6 +72,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 Bundle 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 filetype plugin indent on "开启文件插件
 
