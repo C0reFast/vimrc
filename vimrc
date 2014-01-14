@@ -66,6 +66,8 @@ let g:syntastic_python_flake8_args = "--max-line-length=100"
 
 Bundle 'terryma/vim-expand-region'
 
+Bundle 'plasticboy/vim-markdown'
+
 Bundle 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
