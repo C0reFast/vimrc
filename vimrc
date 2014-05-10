@@ -26,7 +26,7 @@ set noswapfile "设置无交换文件
 
 set backspace=indent,eol,start "设置退格
 
-set fileencodings=utf-8,gb2312,gbk,gb18030 "设置文件编码，解决中文问题
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 "设置文件编码，解决中文问题
 
 
 let mapleader = ","
