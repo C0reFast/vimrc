@@ -28,6 +28,13 @@ set backspace=indent,eol,start "设置退格
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 "设置文件编码，解决中文问题
 
+if has("gui_gtk2")
+    set guifont=DejaVu\ Sans\ Mono\ 10
+elseif has("gui_macvim")
+    set guifont=DejaVu_Sans_Mono:h10
+elseif has("gui_win32")
+    set guifont=DejaVu_Sans_Mono:h10
+end
 
 let mapleader = ","
 
@@ -62,7 +69,7 @@ Bundle 'terryma/vim-multiple-cursors'
 
 Bundle 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = "--max-line-length=100"
+let g:syntastic_python_flake8_args = "--max-line-length=120"
 
 Bundle 'terryma/vim-expand-region'
 
