@@ -40,49 +40,61 @@ let mapleader = ","
 
 "快速编辑 .vimrc
 map <silent> <leader>ee :e ~/.vimrc<cr>
+
+map <silent> <leader>bn :bn<cr>
+
 ".vimrc改变时重载
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 filetype off
 
-"Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
-Bundle 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'
 
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
-Bundle 'hdima/python-syntax'
+Plugin 'hdima/python-syntax'
 let python_highlight_all = 1
 
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-line-length=120"
 
-Bundle 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
 
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
-Bundle 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-Bundle 'Valloric/YouCompleteMe'
-let g:ycm_autoclose_preview_window_after_completion = 1
+Plugin 'honza/vim-snippets'
 
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
+let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
+map <silent> <F7> ::YcmCompleter GoToDeclaration<cr>
+
+Plugin 'Rykka/riv.vim'
+
+call vundle#end()
 filetype plugin indent on "开启文件插件
 
 "配色方案

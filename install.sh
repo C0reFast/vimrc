@@ -5,9 +5,10 @@ CURRENT_DIR=`pwd`
 
 cp $CURRENT_DIR/vimrc $HOME/.vimrc
 
-if [ ! -e $HOME/.vim/bundle/vundle ]; then
+if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
     echo "Installing Vundle"
-    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+    git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
+vim +PluginInstall +qall
 
-echo "Done! Open Vim and run BundleInstall"
+echo "Done!"
