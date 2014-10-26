@@ -76,8 +76,6 @@ let g:syntastic_python_flake8_args = "--max-line-length=120"
 
 Plugin 'terryma/vim-expand-region'
 
-Plugin 'plasticboy/vim-markdown'
-
 Plugin 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -91,8 +89,6 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
 let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
 map <silent> <F7> ::YcmCompleter GoToDeclaration<cr>
-
-Plugin 'Rykka/riv.vim'
 
 call vundle#end()
 filetype plugin indent on "开启文件插件
