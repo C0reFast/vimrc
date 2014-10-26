@@ -46,6 +46,8 @@ map <silent> <leader>bn :bn<cr>
 ".vimrc改变时重载
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
 filetype off
 
 "Vundle.vim
@@ -100,3 +102,17 @@ set t_Co=256
 "设置第80行高亮
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,200),",")
+
+" Strip whitespace {
+function! StripTrailingWhitespace()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " do the business:
+    %s/\s\+$//e
+    " clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+" }
