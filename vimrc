@@ -52,62 +52,56 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 
 filetype off
 
-"Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'tomasr/molokai'
 
-Plugin 'tomasr/molokai'
+Plug 'scrooloose/nerdtree'
 
-Plugin 'scrooloose/nerdtree'
+Plug 'Raimondi/delimitMate'
 
-Plugin 'Raimondi/delimitMate'
-
-Plugin 'hdima/python-syntax'
+Plug 'hdima/python-syntax'
 let python_highlight_all = 1
 
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 let g:ale_python_flake8_args = '--max-line-length=120'
 
-Plugin 'terryma/vim-expand-region'
+Plug 'terryma/vim-expand-region'
 
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
 let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
 map <silent> <F7> ::YcmCompleter GoToDeclaration<cr>
 
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
 
-Plugin 'edkolev/promptline.vim'
-
-call vundle#end()
-filetype plugin indent on "开启文件插件
+Plug 'edkolev/promptline.vim'
+call plug#end()
 
 let g:promptline_preset = {
         \'a'    : [ '$USER' ],
         \'b'    : [ promptline#slices#cwd() ],
         \'warn' : [ promptline#slices#last_exit_code() ],
-        \'z'    : [ promptline#slices#vcs_branch() ]}
+        \'z'    : [ promptline#slices#vcs_branch(), promptline#slices#python_virtualenv() ]}
 
 "配色方案
 colorscheme molokai

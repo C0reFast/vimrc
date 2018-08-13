@@ -10,10 +10,9 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -L $i 
 
 cp $CURRENT_DIR/vimrc $HOME/.vimrc
 
-if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
-    echo "Installing Vundle"
-    git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-fi
-vim +PluginInstall +qall
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+vim +PlugInstall
 
 echo "Done!"
