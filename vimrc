@@ -71,7 +71,8 @@ let g:airline#extensions#ale#enabled = 1
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'w0rp/ale'
-let g:ale_python_flake8_args = '--max-line-length=120'
+let b:ale_linters = ['flake8']
+let g:ale_python_flake8_options = '--max-line-length=120'
 
 Plug 'terryma/vim-expand-region'
 
@@ -107,6 +108,5 @@ let g:promptline_preset = {
 colorscheme molokai
 set t_Co=256
 
-"设置第80行高亮
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn="80,".join(range(120,200),",")
+let &colorcolumn="".join(range(120,200),",")
