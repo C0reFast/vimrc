@@ -83,7 +83,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 Plug 'honza/vim-snippets'
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
